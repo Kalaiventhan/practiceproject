@@ -1,0 +1,13 @@
+name: Issue Workflow
+
+on: [issues]
+
+jobs:
+  issue-workflow:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+    - name: output github context
+      run: echo "${{tojson(github)}}"       
